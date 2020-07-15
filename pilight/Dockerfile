@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ARG BUILD_ARCH
 ARG BUILD_VERSION
 
-LABEL maintainer "Philipp Schmitt <philipp@schmitt.co>"
+LABEL maintainer "SBastrykin <sergey@bastrykin.com>"
 
 RUN apt-get update && \
     apt-get install -y apt-transport-https wget gnupg jq && \
@@ -23,6 +23,8 @@ RUN apt-get update && \
     apt-get remove -y --purge wget && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
+
+RUN echo 11> / sys / class / gpio / export
 
 COPY pilight-config.json /etc/pilight/config.json
 COPY run.sh /run.sh
