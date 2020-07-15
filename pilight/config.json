@@ -5,7 +5,7 @@
     "armhf"
   ],
   "name": "pilight",
-  "version": "1.4.0",
+  "version": "2.4.0",
   "slug": "pilight",
   "description": "Pilight server",
   "startup": "services",
@@ -13,6 +13,7 @@
   "devices": [
     "/dev/mem:/dev/mem:rw"
   ],
+  "full_access": true,
   "privileged": [
     "SYS_RAWIO"
   ],
