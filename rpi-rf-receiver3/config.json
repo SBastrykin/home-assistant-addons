@@ -12,6 +12,7 @@
     ],
     "boot": "auto",
     "devices": ["/dev/mem:/dev/mem:rw"],
+  "full_access": true,
     "privileged": ["SYS_RAWIO"],
     "gpio": "true",
     "apparmor": "false",
